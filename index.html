@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>4-Tab Portfolio</title>
+
+  <!-- Link to your CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Particles.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.min.js"></script>
+  
+  <!-- Typed.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+
+  <!-- One Full-Width Particles Container -->
+  <div id="particles-bg"></div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="#" class="active" onclick="showTab('home', this)">Home</a></li>
+        <li><a href="#" onclick="showTab('resume', this)">Resume</a></li>
+        <li><a href="#" onclick="showTab('projects', this)">Projects</a></li>
+        <li><a href="#" onclick="showTab('contact', this)">Contact Me</a></li>
+      </ul>
+    </nav>
+
+    <!-- HOME SECTION (Shown by Default) -->
+    <section id="home">
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Hello, I'm <span class="highlight">Anuj Shah</span></h1>
+          <!-- Typed Text Placeholder -->
+          <span id="typed" class="typed-text"></span>
+          <br></br>
+          <p>
+            Computer Science student at the University of Texas at Austin. Experienced in Backend development, 
+            Operating systems, ML, and Cloud Computing. Passionate about building impactful software solutions.
+            Work experience at JPMorgan Chase, UH Hula Lab, and SGK.
+
+          </p>
+          <div class="hero-buttons">
+            <a 
+              href="#" 
+              class="btn" 
+              onclick="showTab('projects', document.querySelectorAll('nav a')[2])"
+            >
+              View My Projects
+            </a>
+            <a 
+              href="#" 
+              class="btn-secondary" 
+              onclick="showTab('contact', document.querySelectorAll('nav a')[3])"
+            >
+              Get in Touch
+            </a>
+          </div>
+        </div>
+        <!-- Optional Hero Image -->
+        <div class="hero-image">
+          <!-- Replace this placeholder image with your own -->
+          <img src="anuj_shah.JPG" alt="Hero Image">
+        </div>
+      </div>
+      <!-- Technologies & Tools Display -->
+        <div class="home-tech">
+            <h2>Technologies & Tools</h2>
+            <div class="tech-grid">
+            <!-- Example items; replace images with real icons and add as many as you like -->
+            <div class="tech-item">
+                <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-1024.png" alt="Python Icon">
+                <span>Python</span>
+            </div>
+            <div class="tech-item">
+                <img src="4373217_java_logo_logos_icon.png" alt="Java Icon">
+                <span>Java</span>
+            </div>
+            <div class="tech-item">
+                <img src="aws-icon-2048x2048-ptyrjxdo.png" alt="AWS Icon">
+                <span>AWS</span>
+            </div>
+            <div class="tech-item">
+                <img src="700048-icon-89-document-file-sql-512.webp" alt="SQL Icon">
+                <span>SQL</span>
+            </div>
+            <div class="tech-item">
+                <img src="ISO_C++_Logo.svg.png" alt="C++ Icon">
+                <span>C++</span>
+            </div>
+            <div class="tech-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png" alt="Tensorflow Icon">
+                <span>TensorFlow</span>
+            </div>
+            <div class="tech-item">
+                <img src="react.png" alt="React Icon">
+                <span>React.js</span>
+            </div>
+            <div class="tech-item">
+                <img src="C.png" alt="C Icon">
+                <span>C</span>
+            </div>
+            <div class="tech-item">
+                <img src="django.svg" alt="Django Icon">
+                <span>Django</span>
+            </div>
+            <div class="tech-item">
+                <img src="git.png" alt="Git Icon">
+                <span>Git</span>
+            </div>
+            <div class="tech-item">
+                <img src="mongodb.svg" alt="MongoDB Icon">
+                <span>MongoDB</span>
+            </div>
+            <!-- Add more as needed... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME SECTION (Hidden by Default) -->
+    <section id="resume" style="display: none;">
+      <h1>My Resume</h1>
+      <div class="resume-preview">
+        <!-- Replace with your actual PDF file name/path -->
+        <iframe 
+          src="Anuj_Shah_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0" 
+          width="100%" 
+          height="1070px" 
+          style="border: none;"
+        ></iframe>
+      </div>
+      <div class="resume-download">
+        <a href="Anuj_Shah_Resume.pdf" download class="download-btn">Download PDF</a>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (Hidden by Default) -->
+    <!-- PROJECTS SECTION (Hidden by Default) -->
+<section id="projects" style="display: none;">
+    <h1>My Projects</h1>  
+    <div class="projects-grid">
+      
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-info">
+          <h2>Mosaic Ideation Hub</h2>
+          <p>End-to-end ad ideation web app utilizing an AWS Bedrock pipeline to automate ad generation based on brand inputs. 
+            Integrated generative AI models to create high-quality visuals, enabling real-time image outpainting 
+            and dynamic text overlay using a customizable UI. Built a full-stack system with a Flask backend and a React frontend, 
+            leveraging AWS Lambda for serverless processing and S3 for image storage.</p>
+          <ul class="tech-list">
+            <li>Python</li>
+            <li>React.js</li>
+            <li>AWS Bedrock</li>
+            <li>Flask</li>
+            <li>AWS Lambda</li>
+            <li>AWS S3</li>
+            <li>HTML/CSS</li>
+          </ul>
+        </div>
+        <div class="project-video">
+          <!-- Example: local video file (replace video1.mp4 with your actual file) -->
+          <!-- OR embed a YouTube iframe below -->
+          <video src="MosaicDemo.mp4" controls></video>
+        </div>
+      </div>
+  
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-info">
+          <h2>Image QC Analyzer</h2>
+          <p>This Flask-based Image QC application analyzes image attributes and text/font 
+            properties to ensure compliance with predefined standards. It extracts resolution, 
+            DPI, color profile, margins, and background type using Pillow, while OpenCV and 
+            pytesseract handle OCR-based text detection and font size estimation. The app 
+            compares extracted attributes against predefined client rulesets
+            and highlights mismatches. A simple web interface 
+            allows users to upload images, view extracted data, and check compliance in real-time.
+          </p>
+          <ul class="tech-list">
+            <li>Python</li>
+            <li>Flask</li>
+            <li>OpenCV</li>
+            <li>pytesseract</li>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="project-video">
+          <!-- YouTube Embed Example (replace video link) -->
+          <video src="QCvid.mp4" controls></video>
+        </div>
+      </div>
+  
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-info">
+          <h2>Project Three</h2>
+          <p>Quick summary about what makes this project special.</p>
+          <ul class="tech-list">
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>AWS</li>
+          </ul>
+        </div>
+        <div class="project-video">
+          <video src="video3.mp4" controls></video>
+        </div>
+      </div>
+  
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div class="project-info">
+          <h2>Chest X-Ray Abnormality Predictor</h2>
+          <p>Create and trained a deep learning model to predict multiple (multilabel)
+            abnormalities and diagnoses from 14 different categories. Applied transfer
+            learning with ResNet50 architecture to enhance the performance of my
+            classifier, leveraging pre-trained weights on the CheXpert dataset for improved 
+            accuracy in irregularity diagnosis. Plotted loss per epoch to analyze model 
+            accuracy during training. Model was used to help radiologists at MD Anderson 
+            Cancer Research Center.</p>
+          </p>
+          <ul class="tech-list">
+            <li>TensorFlow</li>
+            <li>PyTorch</li>
+            <li>Python</li>
+            <li>NumPy</li>
+            <li>Matplotlib</li>
+          </ul>
+        </div>
+        <div class="project-video">
+            <img src="cxr.jpeg" alt="Chest X-Ray Predictor Screenshot">
+        </div>
+      </div>
+  
+      <!-- Project 5 -->
+      <div class="project-card">
+        <div class="project-info">
+          <h2>Database Analyzer for Asset Valuation</h2>
+          <p>Developed a web application accessing and displaying information from NoSQL database Cassandra, aiding in
+            the centralization of asset valuation. Analyzed and displayed 50K+ transactions from Cassandra database 
+            using Java, Spring Boot, and Node.js. Developed a UI using React.js, JavaScript, and HTML to visualize 
+            database findings.</p>
+          <ul class="tech-list">
+            <li>Java</li>
+            <li>SQL</li>
+            <li>SpringBoot</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+          </ul>
+        </div>
+        <div class="project-video">
+            <img src="jpmc.png" alt="Database Analyzer Screenshot">
+        </div>
+      </div>
+  
+    </div> <!-- end .projects-grid -->
+      
+</section>
+
+<section id="contact" style="display: none;">
+    <h1>Contact Me</h1>
+    <p>Thanks for checking out my site! Feel free to reach me at either of the platforms below:</p>
+  
+    <div class="contact-details">
+      <!-- Example: Email -->
+      <div class="contact-item">
+        <img src="gmail.png"Email Icon" />
+        <span><a href="anuj30shah@gmail.com">anuj30shah@gmail.com</a></span>
+      </div>
+  
+      <!-- Example: LinkedIn -->
+      <div class="contact-item">
+        <img src="linkedin.png" alt="LinkedIn Icon" />
+        <span><a href="https://www.linkedin.com/in/anuj-j-shah/" target="_blank">LinkedIn</a></span>
+      </div>
+  
+      <!-- Add any other icons/links you want (Twitter, Instagram, etc.) -->
+    </div>
+  </section>
+  
+  
+
+  </main>
+
+  <!-- Load your custom script last -->
+  <script src="script.js"></script>
+</body>
+</html>
